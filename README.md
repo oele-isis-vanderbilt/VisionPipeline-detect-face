@@ -146,6 +146,16 @@ When no artifacts are enabled, no output directory/run folder is created.
 
 > Use this if you want to install and use the tool without cloning the repo.
 > Requires **Python >= 3.10**.
+> 
+
+### Install
+
+```bash
+pip install detect-face-lib
+```
+
+> Note: the PyPI package name is `detect-face-lib`, but the Python module/import name remains `detect_face`.
+
 
 ### CUDA note (optional)
 
@@ -158,15 +168,6 @@ pip uninstall -y torch torchvision
 # then install the CUDA-matching wheels for your system
 # (see: https://pytorch.org/get-started/locally/)
 ```
-
-### Install
-
-```bash
-pip install detect-face-lib
-```
-
-> Note: the PyPI package name is `detect-face-lib`, but the Python module/import name remains `detect_face`.
-
 ---
 
 ## CLI usage (pip)
@@ -369,6 +370,16 @@ Verify:
 uv --version
 ```
 
+### Install dependencies
+
+```bash
+git clone https://github.com/Surya-Rayala/VisionPipeline-detect-face.git
+cd VisionPipeline-detect-face
+uv sync
+```
+
+
+
 ### CUDA note (optional)
 
 For best performance on NVIDIA GPUs, make sure **torch** and **torchvision** are installed with a build that matches your CUDA toolkit / driver stack.
@@ -380,14 +391,6 @@ uv remove torch torchvision
 # then add the CUDA-matching wheels for your system
 # (see: https://pytorch.org/get-started/locally/)
 uv add torch torchvision
-uv sync
-```
-
-### Install dependencies
-
-```bash
-git clone https://github.com/Surya-Rayala/VisionPipeline-detect-face.git
-cd VisionPipeline-detect-face
 uv sync
 ```
 
